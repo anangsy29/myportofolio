@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== LUNAR & SPACE COSMOS PALETTE ===== */
+/* Light Mode (Solar Eclipse / Blood Moon Day):
+   bg: #faf8f5       — celestial ivory / eclipse daylight (solid flat color)
+   card: #ffffff     — clean solar white
+   border: #fed7aa   — warm cosmic peach / amber
+   accent: #ea580c   — fiery blood-moon red-orange
+   accent2: #d97706  — solar amber
+   text: #1c1917     — deep meteorite charcoal
+*/
+/* Dark Mode (Deep Cosmic Void / Silvery Lunar Night):
+   bg: #070b14       — deep space void (solid flat color, no gradient blobs)
+   card: #0d1322     — orbital slate
+   border: #1e293b   — deep cosmos border
+   accent: #f8fafc   — luminous white moonlight
+   accent2: #38bdf8  — starlight cyan
+   text: #f1f5f9     — starlight silver
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-page: #faf8f5;
+  --text-page: #1c1917;
+  --accent: #ea580c;
+  --accent2: #d97706;
+  --card-bg: #ffffff;
+  --border: #fed7aa;
+  --scrollbar-track: #f5efe8;
+  --scrollbar-thumb: #fdba74;
+  --cursor-dot-color: rgb(234 88 12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-page: #070b14;
+  --text-page: #f1f5f9;
+  --accent: #f8fafc;
+  --accent2: #38bdf8;
+  --card-bg: #0d1322;
+  --border: #1e293b;
+  --scrollbar-track: #070b14;
+  --scrollbar-thumb: #334155;
+  --cursor-dot-color: rgb(248 250 252);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-page);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.dark ::selection {
+  background-color: #38bdf8;
+  color: #070b14;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #ea580c; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* ===== LIGHTBOX MODAL ANIMATIONS ===== */
+@keyframes modalZoomInSlow {
+  0%   { opacity: 0; transform: scale(0.85) translateY(32px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes modalBackdropFadeInSlow {
+  0%   { opacity: 0; backdrop-filter: blur(0px); }
+  100% { opacity: 1; backdrop-filter: blur(10px); }
+}
+
+/* ===== SPACE & LUNAR KEYFRAMES ===== */
+@keyframes debrisFloat {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-16px) rotate(8deg); }
+  100% { transform: translateY(12px) rotate(-6deg); }
+}
+
+@keyframes starTwinkle {
+  0%   { opacity: 0.2; transform: scale(0.8); }
+  50%  { opacity: 0.95; transform: scale(1.2); }
+  100% { opacity: 0.3; transform: scale(0.9); }
+}
+
+@keyframes meteorPass {
+  0%   { transform: translateX(0) translateY(0) scale(0); opacity: 0; }
+  10%  { opacity: 1; transform: scale(1); }
+  40%  { transform: translateX(-400px) translateY(400px) scale(0.8); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.animate-modal-backdrop-slow {
+  animation: modalBackdropFadeInSlow 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-modal-card-slow {
+  animation: modalZoomInSlow 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Meteor streak across sky */
+.meteor-streak {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+  transform: rotate(-45deg);
+  animation: meteorPass 14s ease-in-out infinite;
+  animation-delay: 5s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.dark .meteor-streak {
+  background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(56,189,248,0.4), transparent);
+}
+
+/* 3D Carousel */
+.perspective-1200 { perspective: 1200px; }
+.preserve-3d      { transform-style: preserve-3d; }
+
+/* Hide cursor on touch */
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor { display: none !important; }
 }
