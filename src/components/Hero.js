@@ -32,12 +32,11 @@ export default function Hero({ scrollTo }) {
 
       <ScrollReveal direction="up" delay={250}>
         <p className="text-[#57534e] dark:text-[#cbd5e1] max-w-2xl text-base sm:text-lg leading-relaxed mb-8">
-          Passionate dalam merancang dan mengembangkan aplikasi web modern yang cepat, clean, dan intuitif.
-          Berpengalaman membangun sistem berbasis{' '}
-          <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">Laravel</span>{' & '}
-          <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">Next.js</span>,
-          memodernisasi arsitektur sistem enterprise kampus, serta bereksperimen dengan integrasi perangkat{' '}
-          <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">IoT</span>.
+          Web developer pemula yang tertarik membangun aplikasi web modern yang cepat, rapi, dan mudah digunakan.
+          Saya mengerjakan proyek dengan{' '}
+          <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">Laravel</span>{' dan '}
+          <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">Flutter</span>.
+          Saya terus belajar dan berkembang dari setiap proyek yang saya kerjakan.
         </p>
       </ScrollReveal>
 

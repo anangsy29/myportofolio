@@ -25,27 +25,27 @@ export default function About() {
         <div className="lg:col-span-7 space-y-4 text-[#57534e] dark:text-[#cbd5e1] leading-relaxed text-base">
           <ScrollReveal direction="left" delay={100}>
             <p>
-              Bagi saya, ngoding bukan sekadar merangkai baris kode, melainkan seni memecahkan masalah dan merancang solusi digital yang berdampak nyata. Sebagai lulusan{' '}
+              Bagi saya, ngoding adalah cara belajar memecahkan masalah dan membuat solusi digital yang berguna. Saya lulusan{' '}
               <strong className="text-[#1c1917] dark:text-[#f8fafc]">{personalInfo.education.degree} {personalInfo.education.institution}</strong>{' '}
-              (IPK <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">{personalInfo.education.gpa}</span>, Lulus {personalInfo.education.graduation}), saya mendedikasikan fokus pada arsitektur modern web development dan integrasi hardware pintar.
+              (IPK <span className="text-[#ea580c] dark:text-[#38bdf8] font-semibold">{personalInfo.education.gpa}</span>, Lulus {personalInfo.education.graduation}) dan sedang memperdalam web development.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="left" delay={150}>
             <p>
-              Pengalaman nyata saya teruji saat magang di{' '}
-              <span className="text-[#ea580c] dark:text-[#38bdf8] font-medium">Unit Transformasi Digital Polibatam</span>, di mana saya dipercaya memimpin migrasi sistem enterprise kampus ({"\"Budget Management Information System\""}) dari arsitektur legacy C# ke stack modern{' '}
-              <span className="text-[#1c1917] dark:text-[#f8fafc] font-medium">PHP Laravel {'&'} MySQL</span>. Sistem ini berhasil di-deploy ke production dan aktif digunakan dalam operasional kampus harian.
+              Saya magang di{' '}
+              <span className="text-[#ea580c] dark:text-[#38bdf8] font-medium">Unit Transformasi Digital Polibatam</span>, dan melakukan migrasi sistem {"\"Sistem Informasi Pengelolaan Anggaran\""} dari C# ke{' '}
+              <span className="text-[#1c1917] dark:text-[#f8fafc] font-medium">PHP Laravel {'&'} MySQL</span>. Migrasi ini juga menjadi Tugas Akhir saya, dan sistemnya digunakan aktif oleh unit terkait selama sekitar 5 bulan.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="left" delay={200}>
             <p>
-              Di ranah antarmuka, saya menikmati meracik UI/UX yang responsif, snappy, dan interaktif dengan ekosistem{' '}
-              <span className="text-[#1c1917] dark:text-[#f8fafc] font-medium">Next.js {'&'} Tailwind CSS</span>. Rasa ingin tahu terhadap teknologi juga mendorong saya mengeksplorasi dunia{' '}
-              <span className="text-[#ea580c] dark:text-[#38bdf8] font-medium">IoT (Internet of Things)</span> — memprogram mikrokontroler (ESP8266/ESP32, sensor RFID) dan menghubungkannya ke dashboard web serta aplikasi mobile via Flutter {'&'} Firebase.
+              Di sisi antarmuka, saya senang membuat tampilan yang responsif dan mudah digunakan. Saya juga pernah mengerjakan proyek{' '}
+              <span className="text-[#ea580c] dark:text-[#38bdf8] font-medium">Smart Gate berbasis RFID</span>{' '}
+              bersama tim, termasuk membangun aplikasi web dengan Laravel dan aplikasi mobile dengan Flutter.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="left" delay={250}>
-            <p>Terbiasa dengan git workflow, pengujian perangkat lunak (QA), serta penulisan dokumentasi teknis yang terstruktur. Selalu adaptif, komunikatif, dan siap berkolaborasi menghadirkan solusi teknologi terbaik.</p>
+            <p>Saya mengenal alur kerja Git, pengujian perangkat lunak, dan penulisan dokumentasi teknis. Saya komunikatif, mau terus belajar, dan terbuka untuk berkolaborasi dalam tim.</p>
           </ScrollReveal>
 
           {/* Stats Grid */}

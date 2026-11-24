@@ -10,10 +10,10 @@ export const personalInfo = {
     gpa: "3.79 / 4.00",
   },
   bio: [
-    "Tech enthusiast dan Web Developer lulusan D3 Teknik Informatika Politeknik Negeri Batam (IPK 3.79 / 4.00, Lulus Agustus 2026).",
-    "Passionate dalam membangun solusi web modern yang clean, snappy, dan interaktif menggunakan ekosistem Next.js, React, dan Tailwind CSS.",
-    "Di sisi backend, terbiasa merancang arsitektur sistem andal berbasis PHP Laravel dan MySQL — termasuk pengalaman nyata memimpin migrasi sistem informasi anggaran kampus di Unit Transformasi Digital Polibatam.",
-    "Selain web engineering, aktif bereksperimen dengan integrasi IoT (ESP8266/ESP32 & sensor RFID) ke cloud dan mobile (Flutter/Firebase). Selalu haus belajar stack baru dan siap berkontribusi dalam tim tech pengembang."
+    "Web Developer pemula lulusan D3 Teknik Informatika Politeknik Negeri Batam (IPK 3.79 / 4.00, Lulus Agustus 2026).",
+    "Terbiasa membangun aplikasi web dengan PHP Laravel dan MySQL, dengan tampilan yang responsif dan mudah digunakan.",
+    "Magang di Unit Transformasi Digital Polibatam (Sep 2025 – Feb 2026), melakukan migrasi sistem informasi pengelolaan anggaran dari C# ke Laravel. Sistemnya digunakan aktif oleh unit terkait selama ± 5 bulan.",
+    "Pernah mengerjakan proyek Smart Gate berbasis RFID bersama tim, mencakup aplikasi web dan aplikasi mobile Flutter. Terus belajar dan terbuka untuk berkolaborasi."
   ],
   contacts: {
     email: "anangsy29@gmail.com",
